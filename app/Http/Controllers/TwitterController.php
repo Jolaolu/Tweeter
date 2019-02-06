@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use Config;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
@@ -9,22 +8,21 @@ use GuzzleHttp\Subscriber\Oauth\Oauth1;
 
 class TwitterController extends Controller
 {
-    //
     public function index()
     {
         $tweets = $this->getTweets();
 
-        return view('welcome', compact('tweets'));
+        return view('tweets', compact('tweets'));
     }
     public function getTweets()
     {
         $stack = HandlerStack::create();
         $middleware = new Oauth1(
             [
-                'consumer_key' => Config::get('twitter.consumer_key'),
-                'consumer_secret' => Config::get('twitter.consumer_secret'),
-                'token' => Config::get('twitter.access_token'),
-                'token_secret' => Config::get('twitter.access_token_secret')
+                'consumer_key' => Config('services.twitter.consumer_key'),
+                'consumer_secret' => Config('services.twitter.consumer_secret'),
+                'token' => Config('services.twitter.access_token'),
+                'token_secret' => Config('services.twitter.access_token_secret')
             ]
         );
         $stack->push($middleware);
@@ -37,14 +35,24 @@ class TwitterController extends Controller
             ]
         );
         $res = $client->get(
-            'statuses/user_timeline.json',
+            'users/lookup.json',
             [
                 'query' => [
-                'screen_name' => 'laravelphp',
+                'screen_name' => 'jola_adebayor',
                 'count' => '5',
                 ]
             ]
         );
-        dd(json_decode($res->getBody()), true);
+            dd(json_decode($res->getBody()), true);
+
     }
 }
+/**
+//first code written
+
+$url = 'https://api.twitter.com/1.1/statuses/lookup.json';
+        return json_decode($this->guzzle->get($endpoint)->getBody());
+
+
+
+**/
