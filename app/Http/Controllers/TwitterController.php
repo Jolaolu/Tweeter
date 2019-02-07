@@ -48,10 +48,7 @@ class TwitterController extends Controller
     }
 }
 /**
-//first code written
 
-$url = 'https://api.twitter.com/1.1/statuses/lookup.json';
-        return json_decode($this->guzzle->get($endpoint)->getBody());
 
 
 

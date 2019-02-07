@@ -31,18 +31,20 @@ TWITTER_ACCESS_TOKEN = xxxx
 TWITTER_ACCESS_TOKEN_SECRET = xxxx
 ```
 
-Generate a new application key using `artisan`
-
-```
-$ php artisan key:generate
-```
-
 Next, install the dependencies for the project using the following command:
 
 ```
 $ composer install
 
 ```
+
+Generate a new application key using `artisan`
+
+```
+$ php artisan key:generate
+```
+
+
 
 Serve the project using `artisan`
 
