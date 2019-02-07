@@ -35,11 +35,11 @@ class TwitterController extends Controller
             ]
         );
         $res = $client->get(
-            'users/lookup.json',
+            'statuses/mentions_timeline.json',
             [
                 'query' => [
-                'screen_name' => 'jola_adebayor',
-                'count' => '5',
+                'screen_name' => 'myTweeterbot',
+                'count' => '100',
                 ]
             ]
         );
