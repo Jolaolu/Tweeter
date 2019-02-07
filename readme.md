@@ -24,6 +24,13 @@ $ cp .env.example .env
 
 Add your twitter tokens and consumer keys generated from your developer account app in the `.env` file
 
+```
+TWITTER_CONSUMER_KEY = xxxxxx
+TWITTER_CONSUMER_SECRET = xxxxx
+TWITTER_ACCESS_TOKEN = xxxx
+TWITTER_ACCESS_TOKEN_SECRET = xxxx
+```
+
 Generate a new application key using `artisan`
 
 ```
@@ -47,4 +54,4 @@ Then check it on http://localhost:8000
 
 ## Contributing
 
-\
+
