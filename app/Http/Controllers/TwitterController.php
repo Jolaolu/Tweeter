@@ -43,7 +43,13 @@ class TwitterController extends Controller
                 ]
             ]
         );
-            dd(json_decode($res->getBody()), true);
+
+        $responses = json_decode($res->getBody());
+
+
+        // foreach ($responses as $response) {
+        //      print_r($response->entities);
+        // }
 
     }
 }
