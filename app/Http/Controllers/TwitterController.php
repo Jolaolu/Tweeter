@@ -47,15 +47,18 @@ class TwitterController extends Controller
         $responses = json_decode($res->getBody());
 
 
-        // foreach ($responses as $response) {
-        //      print_r($response->entities);
-        // }
+        foreach ($responses as $response) {
+
+                dd($response);
+
+        }
 
     }
+    public function getTweetContents()
+    {
+        $TweetContents = $this->getTweets();
+    }
 }
-/**
-
-
-
-
-**/
+//  echo '<pre>';
+    //response->entities->hashtags
+// echo '</pre>';
