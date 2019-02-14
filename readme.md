@@ -3,8 +3,8 @@
 This is a TwitterAPI Laravel app, Basically follows direvtives specified by the HTTP VERB and performs requests to the twitter API endpoint.
 Initially built to serve as the scavenger for [SaveToKolo](https://twitter.com/SaveToKolo) by [CreativityKills](https://www.creativitykills.co).
 
-
 ## Installation
+
 To install, clone the repository to your preferred location on your machine:
 
 ```
