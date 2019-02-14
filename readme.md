@@ -1,6 +1,7 @@
 # Laravel Twitter API
 
-This is the TwitterAPI Laravel app, Basically follows direvtives specified by the HTTP VERB and performs requests to the twitter API endpoint
+This is the TwitterAPI Laravel app, Basically follows direvtives specified by the HTTP VERB and performs requests to the twitter API endpoint.
+Initially built to serve as the scavenger for SaveToKolo.
 
 
 ## Installation
